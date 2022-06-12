@@ -1,0 +1,49 @@
+{% extends 'shared/HomeBase.html' %}
+{% block title %} Login page {% endblock %}
+{% block keyword %} Login users {% endblock %}
+{% block description %} Login users on the Panel {% endblock %}
+
+{% block content %}
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-conten padding-y" style="min-height:84vh">
+{% if request.GET.command == 'verification' %}
+    <div class="container mx-auto alert alert-info text-center" role="alert" style="max-width: 1024px; margin-top:100px;">
+        <h5>Thank You For Registration Whit us. We have sent a Verification Email To Your Email Address [{{ request.GET.email }}]</h5>
+         <br><br>
+            <h6>Already verified ? <a href="{% url 'logout_user' %}">Login</a></h6>
+    </div>
+
+{% else %}
+	<div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
+      <div class="card-body">
+      <h4 class="card-title mb-4">Sign in</h4>
+          {% include 'shared/includs/alerts.html' %}
+      <form action="{% url 'login_user' %}" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+			 <input type="email" class="form-control" placeholder="Email Address" name="email" >
+          </div> <!-- form-group// -->
+          <div class="form-group">
+			<input type="password" class="form-control" placeholder="Password" name="password" >
+          </div> <!-- form-group// -->
+
+          <div class="form-group">
+          	<a href="{% url 'forgotPassword_user' %}" class="float-right">Forgot password?</a>
+
+          </div> <!-- form-group form-check .// -->
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+          </div> <!-- form-group// -->
+      </form>
+      </div> <!-- card-body.// -->
+    </div> <!-- card .// -->
+
+     <p class="text-center mt-4">Don't have account? <a href="{% url 'register_user' %}">Sign up</a></p>
+     <br><br>
+    {% endif %}
+<!-- ============================ COMPONENT LOGIN  END.// ================================= -->
+
+
+</section>
+{% endblock %}

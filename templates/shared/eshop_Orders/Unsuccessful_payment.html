@@ -1,0 +1,14 @@
+{% extends 'shared/HomeBase.html' %}
+{% load static %}
+{% block title %} GreatKart | Success_Payments {% endblock %}
+{% block keyword %} onlineEshop {% endblock %}
+{% block description %} Success Payments page {% endblock %}
+
+{% block content %}
+
+    <h2 class="text-center mb-10">unfortunately your payment wasn't success !!</h2>
+    <h3 class="text-center mb-10">پرداخت با شکست مواجه شده است. اگر پول کم شده است ظرف مدت ۴۸ ساعت پول به حساب شما بازخواهد گشت. </h3>
+
+    <a href="{% url 'dashboard_user' %}" class="btn btn-primary btn-block"> Go Dashboard </a>
+
+{% endblock %}

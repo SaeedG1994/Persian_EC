@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | فروشگاه بهمن{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="{% static 'admin/images/Bahman.png' %}" style="width: 150px; height: auto;" >
+        پنل دوم فروشگاه بهمن ( p-3 )</a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

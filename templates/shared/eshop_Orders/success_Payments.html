@@ -1,0 +1,13 @@
+{% extends 'shared/HomeBase.html' %}
+{% load static %}
+{% block title %} GreatKart | Success_Payments {% endblock %}
+{% block keyword %} onlineEshop {% endblock %}
+{% block description %} Success Payments page {% endblock %}
+
+{% block content %}
+
+    <h2 class="text-center mb-10">Your payments it was success fully</h2>
+
+    <a href="{% url 'dashboard_user' %}" class="btn btn-primary btn-block"> Go Dashboard </a>
+
+{% endblock %}
