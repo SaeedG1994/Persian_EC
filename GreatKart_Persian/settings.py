@@ -146,7 +146,7 @@ MESSAGE_TAGS = {
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bahman.gs2020@gmail.com'
-EMAIL_HOST_PASSWORD = 'saeed086087'
+EMAIL_HOST_PASSWORD = '*********'
 EMAIL_USE_TLS = True
 
 AZ_IRANIAN_BANK_GATEWAYS = {
@@ -161,7 +161,7 @@ AZ_IRANIAN_BANK_GATEWAYS = {
        #     'TERMINAL_CODE': '<YOUR TERMINAL CODE>',
        # },
        'ZARINPAL': {
-           'MERCHANT_CODE': 'fc5b3f9b-7089-4cc5-a03c-fd90ac73c249',
+           'MERCHANT_CODE': '',
        },
        # 'IDPAY': {
        #     'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
